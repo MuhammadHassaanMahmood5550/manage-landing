@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital@0;1&family=Source+Sans+Pro:wght@600;700;900&display=swap');
+body{
+    overflow-x: hidden;
+}
+
+@mixin button($pos) {    
+        background-color: #F3613C;
+        box-shadow: 2px 2px 10px;
+        border-radius: 25px 25px 25px 25px;
+        transform: $pos;
+        transition: all 0.6s;
+        &:hover{
+            background-color: #F98F75;
+        }
+}
+
+#navbar{
+    .navbar-button{
+        @include button(translateX(160px));
+    }
+ 
+    .middle{
+        margin: 0 auto 0 auto;
+    }
+    .nav-link{
+        font-weight: 600;
+        color: black;
+        transition: all .4s;
+        &:hover{
+            color: gray;
+        }
+    }
+}
+
+#home-section{
+    h1{
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 700;
+       font-size: 2.9rem;
+    }
+
+    .home-button{
+        @include button(translateX(0px));
+    }
+
+    .img-1{
+       position: absolute;
+       z-index: -1;
+       top: -330px;
+       left: 250px;
+
+    }
+    
+}
+
+#about-section{
+    .about-button{
+        @include button(translateX(0px));
+    }
+    .col-position{
+        margin-left: 150px;
+    }
+    .about-svg{
+        position: absolute;
+        width: 750px;
+        z-index: -1;
+        top: 1040px;
+        left: -450px;
+    }
+}
+
+#people-section{
+    .people-img{
+        z-index: 2;
+        margin-top: -55px;
+    }
+    .people-button{
+        @include button(translateX(0px));
+    }
+    .card{
+        margin-top: 57px;
+    }
+}
+
+#above-footer{
+    background-color: #F3613C;
+
+    .above-footer-button{
+        border-radius: 25px 25px 25px 25px;
+        transition: all 0.2s;
+        &:hover{
+            color:  #da7e67;
+            background-color: whitesmoke;
+        }
+
+        background-color: white;
+        color: #F3613C;
+    }  
+}
+
+#footer{
+    .footer-button{
+        
+        background-color: #F3613C;
+        border-radius: 25px 25px 25px 25px;
+       transform: translateY(-4px);
+        transition: all 0.6s;
+        &:hover{
+            background-color: #F98F75;
+        }
+    }
+    i{
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover{
+           
+            color: #F3613C;
+        }
+    }
+
+    p{
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover{
+           
+            color: #F3613C;
+        }
+    }
+  
+    .update{
+        border-style: none;
+        border-radius: 25px;
+    }
+
+}
+
+//  @media (min-width: 100px) and (max-width: 499px) {
+//     #footer{
+//         .fo{
+//             background-color: chartreuse;
+//         }
+//     }
+//   }
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 500px) and (max-width: 767.98px) {
+//     #footer{
+//         .fo{
+//             background-color: yellow;
+//         }
+//     }
+//   }
+
+@media(max-width: 767.98px){
+    
+#navbar{
+    .navbar-button{
+        @include button(translateX(-10px));
+        margin-top: 14px;
+    }
+ 
+}
+
+
+    #home-section{
+    margin-top: -40px;
+    .rowc {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .colc1 {
+        width: 100%;
+        float: right;
+        margin-top: -30px;
+        margin-bottom: -30px;
+    }
+
+    .colc2 {
+        width: 100%;
+        float: right;
+
+       // padding-left: 0px;
+      //  padding-right: 0px;
+    }
+
+    .img-1{
+        position: absolute;
+        z-index: -1;
+        top: -220px;
+        left: 60px;
+ 
+     }
+}
+    #about-section{
+        .first-col{
+            padding: 10%;
+            
+        }
+        .col-position{
+     //  transform: translateX(0px);
+       margin-left: 0px;
+       width: 100%;
+       
+
+        }
+
+        .about-svg{
+            position: absolute;
+            width: 750px;
+            z-index: -1;
+            top: 1000px;
+            left: -250px;
+        }
+    }
+    #above-footer{
+        .first-col{
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+        .heading{
+            font-size: 3rem;
+        }
+        .above-footer-button{
+            margin-top: 20px;
+        }  
+    }
+   #footer{
+    h2{
+        font-size: 3rem;
+    } 
+    i{
+        font-size: 1.5rem;
+        transform: translateY(-28px);
+    }
+
+    .fo{
+
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+
+    }
+
+   } 
+  
+}
+
+
+
